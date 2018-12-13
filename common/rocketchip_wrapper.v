@@ -379,7 +379,7 @@ module rocketchip_wrapper
     .CLKOUT5_PHASE(0.0),
     .CLKOUT6_PHASE(0.0),
     .CLKOUT4_CASCADE("FALSE"),
-    .DIVCLK_DIVIDE(1),
+    .DIVCLK_DIVIDE(`RC_DIVCLK_DIVIDE),
     .REF_JITTER1(0.0),
     .STARTUP_WAIT("FALSE")
   ) MMCME2_BASE_inst (

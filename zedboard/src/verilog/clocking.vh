@@ -3,9 +3,9 @@
 Rocket Chip Clock Configuration
 
 
-Rocket Chip             1000              RC_CLK_MULT
- Clockrate     =   ---------------   X   -------------
-  (in MHz)         ZYNQ_CLK_PERIOD       RC_CLK_DIVIDE
+Rocket Chip             1000              RC_CLK_MULT               1        
+ Clockrate     =   ---------------   X   -------------   X   ----------------
+  (in MHz)         ZYNQ_CLK_PERIOD       RC_CLK_DIVIDE       RC_DIVCLK_DIVIDE
 
 
 This sets the parameters used by rocketchip_wrapper.v to
@@ -29,5 +29,6 @@ hw/src/constrs/pin_constraints.xdc
 
 `define RC_CLK_DIVIDE   40.0
 
+`define RC_DIVCLK_DIVIDE 1
 
 `endif // _clocking_vh_
